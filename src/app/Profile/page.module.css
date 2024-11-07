@@ -1,0 +1,56 @@
+.Half {
+    width: 50%; /* Half the width of the page */
+    height: 100vh; /* Full height of the viewport */
+    background-color: red; /* Red background */
+    box-sizing: border-box; 
+    margin: 3%;
+}
+.Half2 {
+    width: 50%; /* Half the width of the page */
+    height: 100vh; /* Full height of the viewport */
+    position: absolute;
+    left: 52%;
+    top: 0%;
+    background-color: blue; /* Red background */
+    box-sizing: border-box; 
+    margin: 3%;
+}
+
+#username {
+    /* Add your desired styles here */
+    font-size: 20px;          /* Example: font size */
+    color: blue;              /* Example: text color */
+    padding: 10px;           /* Example: padding */
+    border: 1px solid gray;   /* Example: border */
+    border-radius: 5px;       /* Example: rounded corners */
+    background-color: #f0f0f0; /* Example: background color */
+}
+
+.info {
+    position: fixed;
+    top: 0%;
+    left: 95%;
+    z-index: 1000;
+}
+.personal {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: darkslategray;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 2000;
+    overflow: auto;
+
+}
+.levels {
+    border: #f0f0f0;
+    color: red;
+    position: relative;
+    left: 5%;
+    position: absolute;
+    top: 15%;
+    background-color: dodgerblue;
+}
