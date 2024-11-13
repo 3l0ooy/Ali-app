@@ -1,0 +1,65 @@
+.container {
+    position: relative;
+    left: 15%;
+    width: 47%;
+    position: absolute;
+    top: 36%;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    color: #f0f0f0;
+  }
+  
+  .levels {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .levelMarker {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+  
+  .levelLabel {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+  }
+  
+  .activeDot {
+    background-color: #a569bd;
+    width: 14px;
+    height: 14px;
+  }
+  
+  .progressLine {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    margin-top: 1rem;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background-color: #a569bd;
+    transition: width 0.3s;
+  }
+  
+  .currentLevel {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  

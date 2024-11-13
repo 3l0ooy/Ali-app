@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from "./page.module.css";
 import Skill from './Skill/Skill';
+import AuditsTable from '../Audit/Audit';
 
 const UserInfoDisplay2 = ({ auditTatio, totalDown, totalUp }) => {
     // console.log("fuck", userData.tatal)
@@ -19,6 +20,8 @@ const UserInfoDisplay2 = ({ auditTatio, totalDown, totalUp }) => {
                 {/* <p>Total Up: {item.totalUp}</p> */}
                 {/* <p>Total Down: {item.totalDown}</p> */}
           </ul>
+          <AuditsTable/>
+
         </div>
       );
 

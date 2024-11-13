@@ -1,0 +1,290 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Profile/page.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.page_Half__aADcU {
+    width: 50%; /* Half the width of the page */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #393939 ; /* Red background */
+    box-sizing: border-box; 
+    margin: 3%;
+}
+.page_Half2__3X_EB {
+    width: 50%; /* Half the width of the page */
+    height: 100vh; /* Full height of the viewport */
+    position: absolute;
+    left: 52%;
+    top: 0%;
+    background-color: blue; /* Red background */
+    box-sizing: border-box; 
+    margin: 3%;
+}
+
+#page_username__w9niN {
+    /* Add your desired styles here */
+    font-size: 20px;          /* Example: font size */
+    color: blue;              /* Example: text color */
+    padding: 10px;           /* Example: padding */
+    border: 1px solid #676767;   /* Example: border */
+    border-radius: 5px;       /* Example: rounded corners */
+    background-color: #f0f0f0; /* Example: background color */
+}
+
+.page_info__IRY_g {
+    position: fixed;
+    top: 0%;
+    left: 95%;
+    z-index: 1000;
+}
+.page_personal__m3K6R {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: darkslategray;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 2000;
+    overflow: auto;
+
+}
+.page_levels__oloNI {
+    background-color: black;
+    border: #f0f0f0;
+    /* color: black; */
+    position: relative;
+    left: 10%;
+    position: absolute;
+    top: 15%;
+}
+.page_pos__WJwiY {
+    background-color: black;
+    border: #f0f0f0;
+    position: relative;
+    left:22%;
+    position: absolute;
+    top: 26%;
+}
+.page_xp__gbrR2 {
+    background-color: black;
+    border: #f0f0f0;
+    position: relative;
+    left:28%;
+    position: absolute;
+    top: 15%;
+}
+
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Profile/Skill/Skill.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/* components/Skill.module.css */
+.Skill_ChartWrapper__jqUk0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.Skill_Chart__5XsK7 {
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    left: 33%;
+    position: absolute;
+    top: 51%;
+}
+
+.Skill_Chart1__g_IPi {
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    left: 7%;
+    position: absolute;
+    top: 30%;
+}
+.Skill_skillsAmount__6lI7r {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    background-color: black;
+}
+.Skill_Technologies__M7NxU {
+    background-color: red;
+    font-size: 19px;
+    width: 267px;
+    height: 143px;
+    background-color: lightblue;
+    display: inline-block;
+    text-align: center;
+    line-height: 33px;
+}
+.Skill_technologies2__ropz6 {
+    background-color: red;
+    position: absolute;
+    left: 28%;
+    position: fixed;
+    top: 55%;
+    width: 299px;
+    height: 144px;
+    background-color: lightblue;
+    display: inline-block;
+    text-align: center;
+    line-height: 45px;
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Profile/ProgressGraph.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+.ProgressGraph_container__zDoZg {
+    position: relative;
+    left: 15%;
+    width: 47%;
+    position: absolute;
+    top: 36%;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    color: #f0f0f0;
+  }
+  
+  .ProgressGraph_levels__kb6iM {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .ProgressGraph_levelMarker__Veq_7 {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+  
+  .ProgressGraph_levelLabel__J_6Lr {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .ProgressGraph_dot__jEZ2H {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+  }
+  
+  .ProgressGraph_activeDot__aPr2E {
+    background-color: #a569bd;
+    width: 14px;
+    height: 14px;
+  }
+  
+  .ProgressGraph_progressLine__10WFX {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    margin-top: 1rem;
+  }
+  
+  .ProgressGraph_progressFill__2eH_9 {
+    height: 100%;
+    background-color: #a569bd;
+    transition: width 0.3s;
+  }
+  
+  .ProgressGraph_currentLevel__es0qi {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Audit/Audit.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+    .Audit_auditsContainer__6p23J {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+        
+    }
+
+    .Audit_auditSection__HtRML {
+        width: 45%;
+        max-height: 200px; /* Adjust the height as desired */
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+        overflow-y: auto; /* Enables vertical scroll */
+        font-size: 0.9rem; /* Reduces font size for a smaller look */
+    }
+    
+    .Audit_passAudits__Y15w5 {
+        background-color: #e6f7e6;
+    }
+
+    .Audit_failAudits__nA2dl {
+        background-color: #f8d7da;
+    }
+
+    .Audit_header__XmxzW {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .Audit_table__GR_Ao {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+        
+    }
+
+    .Audit_th__tK_i3, .Audit_td__1ZMWU {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid black;
+        height: 60px;
+        size: 4%;
+        
+    }
+
+    .Audit_th__tK_i3 {
+        background-color: #f4f4f4;
+        font-weight: bold;
+        height: inherit;
+        
+    }
+
+    .Audit_td__1ZMWU {
+        background-color: #fff;
+        overflow-y: auto;
+        width: 10%;
+    }
+
+    .Audit_pass__CJLSK {
+        color: green;
+    }
+
+    .Audit_fail__8kulx {
+        color: red;
+    }
+
+    .Audit_noAudits__P6ZMj {
+        text-align: center;
+        color: #888;
+    }
+    .Audit_tody__AhJYC {
+        background-color: black;
+    }
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Profile/PopInfo/pop.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+.pop_username__Zcd2j {
+    color: red;
+}
+

@@ -3,16 +3,23 @@
 import React from 'react';
 import styles from "./page.module.css";
 import Skill from './Skill/Skill';
+import ProgressGraph from './chake';
 
 const UserInfoDisplay = ({ userData, transactionData, auditData, userXP }) => {
     return (
     <div className={styles.Half}>
-        <div className={styles.levels}>
+        <div >
         {transactionData && (
-           <h3>Your Level  ➝  {transactionData[0]?.amount || 'N/A'} </h3>
+            
+           <h1 className={styles.levels}>Your Level  ➝  {transactionData[0]?.amount || 'N/A'} </h1>
+
         )}
-           <h3>Your ar an ➝ </h3> 
-           <h3>Your Total XP ➝ {userXP || 'N/A'}</h3>
+        {transactionData && (
+
+           <ProgressGraph level={transactionData[0]?.amount } />
+        )}
+            
+           <h1  className={styles.xp}>Your Total XP ➝ {userXP || 'N/A'}</h1>
         </div>
         <div className={styles.Skill}>
             <Skill  />

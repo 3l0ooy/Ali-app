@@ -225,13 +225,13 @@ const Skill = () => {
 
     return (
         <div className={Style.Skill}>
-            <div id="skills-amount">
+            <div id="skills-amount" className={Style.skillsAmount}>
                 <h3>Technical Skills:</h3>
-                <p>{technicalSkills.length > 0 
+                <p className={Style.Technologies}>{technicalSkills.length > 0 
                     ? technicalSkills.map(skill => `${skill.type.replace("skill_", "").replace("-", " ")}: ${skill.amount}%`).join(", ") 
                     : "No technical skills data available"}</p> 
                 <h3>Technologies:</h3>
-                <p>{technologies.length > 0 
+                <p  className={Style.technologies2}>{technologies.length > 0 
                     ? technologies.map(skill => `${skill.type.replace("skill_", "").replace("-", " ")}: ${skill.amount}%`).join(", ") 
                     : "No technologies data available"}</p>
             </div>
