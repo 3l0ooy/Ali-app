@@ -10,45 +10,68 @@
     max-width: 100%;
     height: 100%;
     position: relative;
-    left: 33%;
+    left: 28%;
     position: absolute;
-    top: 51%;
+    top: 45%;
 }
 
 .Chart1 {
     max-width: 100%;
     height: 100%;
     position: relative;
-    left: 7%;
+    left: 0%;
     position: absolute;
-    top: 30%;
+    top: 23%;
 }
 .skillsAmount {
     position: absolute;
     top: 50%;
     width: 50%;
-    background-color: black;
+    background-color: #1d1d1d;
 }
 .Technologies {
-    background-color: red;
-    font-size: 19px;
-    width: 267px;
-    height: 143px;
-    background-color: lightblue;
-    display: inline-block;
-    text-align: center;
-    line-height: 33px;
+    /* background-color: red; */
+    position: absolute;
+    left: 66%;
+    margin-top: 8%;
+    top: 62%;
+    width: 299px;
+    /* height: 144px; */
+    background-color: #1d1d1d;
+    padding: 10px;
+    /* text-align: center; */
+    border-radius: 8px;
+
 }
 .technologies2 {
-    background-color: red;
     position: absolute;
-    left: 28%;
-    position: fixed;
-    top: 55%;
+    left: 4%;
+    height: -81%;
+    margin-top: 8%;
+    top: -24%;
     width: 299px;
-    height: 144px;
-    background-color: lightblue;
-    display: inline-block;
-    text-align: center;
-    line-height: 45px;
+    background-color: #1d1d1d;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+.h3m {
+    position:absolute;
+    left: 73%;
+    top: 66%;
+    margin-top: 4%;
+    background-color: #1d1d1d;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+.h3z {
+    position: absolute;
+    left: 12%;
+    top: 66%;
+    margin-top: 4%;
+    background-color: #1d1d1d;
+    padding: 10px;
+    border-radius: 8px;
+
 }

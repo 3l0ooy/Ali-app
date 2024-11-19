@@ -1,3 +1,66 @@
 .username {
     color: red;
 }
+.name {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: #1d1d1d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: withe;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+#error-message {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.div {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 255);
+    font-family: 'Arial', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .div {
+        padding: 0.5rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .paragraph {
+        font-size: 0.9rem;
+    }
+}
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #393939;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}

@@ -3,32 +3,41 @@
         justify-content: space-between;
         gap: 2rem;
         padding: 2rem;
-        
+
     }
 
     .auditSection {
         width: 45%;
-        max-height: 200px; /* Adjust the height as desired */
+        max-height: 251px; /* Adjust the height as desired */
         padding: 1rem;
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         background-color: #f9f9f9;
         overflow-y: auto; /* Enables vertical scroll */
         font-size: 0.9rem; /* Reduces font size for a smaller look */
+        
     }
     
     .passAudits {
-        background-color: #e6f7e6;
+        position: absolute;
+        top: 59%;
+        left: 1%;
+        background-color: #1d1d1d;
+        color: black;
     }
 
     .failAudits {
-        background-color: #f8d7da;
+        position: absolute;
+        top: 59%;
+        left: 50%;
+        background-color: #1d1d1d;
+        color: black;
     }
 
     .header {
         margin-bottom: 1rem;
         font-size: 1.5rem;
-        color: #333;
+        color: white;
     }
 
     .table {
@@ -48,14 +57,14 @@
     }
 
     .th {
-        background-color: #f4f4f4;
+        background-color: gray;
         font-weight: bold;
         height: inherit;
         
     }
 
     .td {
-        background-color: #fff;
+        background-color: gray;
         overflow-y: auto;
         width: 10%;
     }

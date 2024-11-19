@@ -1,69 +1,42 @@
-// src/app/Profile/UserInfoDisplay.tsx
-
-import React from 'react';
+import React, { Suspense } from 'react';
 import styles from "./page.module.css";
 import Skill from './Skill/Skill';
 import ProgressGraph from './chake';
 
-const UserInfoDisplay = ({ userData, transactionData, auditData, userXP }) => {
-    return (
+// Define the type for the props
+interface TransactionData {
+  amount: number;
+}
+
+interface UserInfoDisplayProps {
+  userData: Record<string, any>; // You can replace `any` with a more specific type if you know the structure of userData
+  transactionData: TransactionData[] | null; // Array of transaction objects or null
+  auditData: Record<string, any>; // You can replace `any` with a more specific type if you know the structure of auditData
+  userXP: number | string; // XP can be a number or string
+}
+
+// Loading component defined in the same file
+const Loading: React.FC = () => {
+  return <div>Loading...</div>;
+};
+
+const UserInfoDisplay: React.FC<UserInfoDisplayProps> = ({ userData, transactionData, auditData, userXP }) => {
+  const level = transactionData && transactionData.length > 0 ? transactionData[0].amount : 'N/A';
+
+  return (
     <div className={styles.Half}>
-        <div >
-        {transactionData && (
-            
-           <h1 className={styles.levels}>Your Level  ➝  {transactionData[0]?.amount || 'N/A'} </h1>
-
-        )}
-        {transactionData && (
-
-           <ProgressGraph level={transactionData[0]?.amount } />
-        )}
-            
-           <h1  className={styles.xp}>Your Total XP ➝ {userXP || 'N/A'}</h1>
-        </div>
-        <div className={styles.Skill}>
-            <Skill  />
-        </div>
+      <div>
+        <h1 className={styles.levels}>Your Level ➝ {level} </h1>
+        <Suspense fallback={<Loading />}>
+          <ProgressGraph level={level} />
+        </Suspense>
+        <h1 className={styles.xp}>Your Total XP ➝ {userXP || 'N/A'}</h1>
+      </div>
+      <div className={styles.Skill}>
+        <Skill />
+      </div>
     </div>
-    )
-
+  );
 };
 
 export default UserInfoDisplay;
-
-// {transactionData[0]?.amount || 'N/A'}
-    //     <div>
-    //         <div>
-    //             <h1 id="name">Welcome, {userData[0]?.firstName || 'N/A'} {userData[0]?.lastName || 'N/A'}!</h1>
-    //             <p id="username">👤 {userData[0]?.login || 'N/A'}</p>
-    //             <p id="userid">🆔 {userData[0]?.id || 'N/A'}</p>
-    //             <p id="email">📩 {userData[0]?.email || 'N/A'}</p>
-    //             <p id="campus">🌐 {userData[0]?.campus || 'N/A'}</p>
-    //         </div>
-    //         {transactionData && (
-    //             <div>
-    //                 <h2>Latest Transaction Amount: {transactionData[0]?.amount || 'N/A'}</h2>
-    //             </div>
-    //         )}
-    //         {auditData && (
-    //             <div>
-    //                 <h2>Valid Audits:</h2>
-    //                 {auditData.validAudits && auditData.validAudits.nodes.length > 0 ? (
-    //                     auditData.validAudits.nodes.map((audit: any) => (
-    //                         <p key={audit.group.captainLogin}>{audit.group.captainLogin}: {audit.group.path}</p>
-    //                     ))
-    //                 ) : (
-    //                     <p>No valid audits available.</p>
-    //                 )}
-    //                 <h2>Failed Audits:</h2>
-    //                 {auditData.failedAudits && auditData.failedAudits.nodes.length > 0 ? (
-    //                     auditData.failedAudits.nodes.map((audit: any) => (
-    //                         <p key={audit.group.captainLogin}>{audit.group.captainLogin}: {audit.group.path}</p>
-    //                     ))
-    //                 ) : (
-    //                     <p>No failed audits available.</p>
-    //                 )}
-    //             </div>
-    //         )}
-    //     </div>
-    // );

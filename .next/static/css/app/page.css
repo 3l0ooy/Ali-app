@@ -173,3 +173,144 @@ a.page_secondary__lm_PT {
   }
 }
 
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/comp.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.comp_button1__rC9_j {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: 7%;
+    margin-left: -3%;
+}
+
+.comp_button1__rC9_j:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: comp_glowing__UaRk5 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.comp_button1__rC9_j:active {
+    color: #000
+}
+
+.comp_button1__rC9_j:active:after {
+    background: transparent;
+}
+
+.comp_button1__rC9_j:hover:before {
+    opacity: 1;
+}
+
+.comp_button1__rC9_j:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 00%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes comp_glowing__UaRk5 {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/* From Uiverse.io by VijinV */ 
+.comp_inputbox__Qx4Fl {
+    position: relative;
+    width: 196px;
+  }
+  
+  .comp_inputbox__Qx4Fl input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  
+  .comp_inputbox__Qx4Fl span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    letter-spacing: 00.05em;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  
+  .comp_inputbox__Qx4Fl input:valid ~span,
+  .comp_inputbox__Qx4Fl input:focus ~span {
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0,75em;
+  }
+  
+  .comp_inputbox__Qx4Fl i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+  }
+  
+  .comp_inputbox__Qx4Fl input:valid ~i,
+  .comp_inputbox__Qx4Fl input:focus ~i {
+    height: 44px;
+  }
+  .comp_container1__T5BgV {
+    background-color: black;
+    
+  }
+  .comp_imges__w4awM {
+    position: fixed;
+    padding-left: 72.5%;
+  }
+/* styles.css */
+
+.comp_container__zFM0R {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1d1d1d;
+}
+

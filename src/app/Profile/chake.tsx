@@ -30,12 +30,6 @@ const ProgressGraph = ({ level }) => {
           </div>
         ))}
       </div>
-      <div className={styles.progressLine}>
-        <div className={styles.progressFill} style={{ width: `${progressPercentage}%` }}></div>
-      </div>
-      <div className={styles.currentLevel}>
-        {currentLevel.label} (Level {level})
-      </div>
     </div>
   );
 };

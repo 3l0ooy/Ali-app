@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import HandleLogin from './HandleLogin';
-
+import Style from './comp.module.css'
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -24,57 +24,44 @@ const Login = () => {
     };
 
     return (
-        <div style={styles.container}>
-                <>
-                    <h2>Login</h2>
-                    <form onSubmit={onLoginClick}>
-                        <input
-                            type="text"
-                            placeholder="Email or Username"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                            style={styles.input}
-                        />
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            style={styles.input}
-                        />
-                        <button type="submit" style={styles.button}>Login</button>
-                    </form>
-                    {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-                </>
-        </div>
+        <>
+        <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" className={Style.imges} />
+
+<div className={Style.container}>
+    <div className="container1">
+        <form onSubmit={onLoginClick}>
+            <div className={Style.inputbox}>
+                <input
+                    required
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div className={Style.inputbox}>
+                <input
+                    required
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)} // Fixed
+                />
+                <span>Password</span>
+                <i></i>
+            </div>
+            <button type="submit" className={Style.button1}>Login</button>
+        </form>
+        
+        {errorMessage && <p style={{ color: 'red', textAlign: 'center' }}>{errorMessage}</p>}
+    </div>
+    
+</div>
+</>
+
     );
 };
 
-const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        backgroundColor: '#f0f0f0',
-    },
-    input: {
-        width: '300px',
-        padding: '10px',
-        margin: '10px 0',
-        border: '1px solid #ccc',
-        borderRadius: '5px',
-    },
-    button: {
-        width: '100%',
-        padding: '10px',
-        backgroundColor: '#28a745',
-        color: 'white',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-    },
-};
+
 
 export default Login;

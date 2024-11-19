@@ -1,19 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
 .Half {
     width: 50%; /* Half the width of the page */
     height: 100vh; /* Full height of the viewport */
     background-color: #393939 ; /* Red background */
     box-sizing: border-box; 
     margin: 3%;
+    /* margin-top: 0.7%; */
+    margin-left: 0%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 255);
 }
 .Half2 {
     width: 50%; /* Half the width of the page */
     height: 100vh; /* Full height of the viewport */
     position: absolute;
-    left: 52%;
+    left: 49%;
     top: 0%;
-    background-color: blue; /* Red background */
+    background-color: #393939; /* Red background */
     box-sizing: border-box; 
     margin: 3%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 255);
 }
 
 #username {
@@ -28,34 +33,54 @@
 
 .info {
     position: fixed;
-    top: 0%;
-    left: 95%;
+    top: 2%;
+    left: 93%;
     z-index: 1000;
+    background-color: black;
+    color: black; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Optional padding for button size */
+    font-size: 16px; /* Optional font size */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    color: white;
 }
+
+.info:hover {
+    background-color: #333; /* Slightly lighter shade of black on hover */
+}
+
+
 .personal {
     position: fixed;
     top: 0%;
     left: 50%;
     width: 50%;
     height: 100%;
-    background-color: darkslategray;
+    background-color: #1d1d1d;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid #1d1d1d;
     z-index: 2000;
     overflow: auto;
 
 }
+.butons {
+    margin-left: 50%;
+    padding: 10px;
+}
 .levels {
-    background-color: black;
+    background-color: #1d1d1d;
     border: #f0f0f0;
     /* color: black; */
     position: relative;
-    left: 10%;
+    left: 1%;
     position: absolute;
     top: 15%;
+    padding: 10px;
+    border-radius: 8px;
+
 }
 .pos {
-    background-color: black;
+    background-color: #1d1d1d;
     border: #f0f0f0;
     position: relative;
     left:22%;
@@ -63,11 +88,177 @@
     top: 26%;
 }
 .xp {
-    background-color: black;
+    background-color: #1d1d1d;
     border: #f0f0f0;
     position: relative;
     left:28%;
     position: absolute;
     top: 15%;
+    padding: 10px;
+    border-radius: 8px;
+
 }
 
+.auditContainer {
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1d;
+    color: #ffffff;
+    padding: 20px;
+    width: 530px;
+    border-radius: 8px;
+    margin-left: 20%;
+    margin-top: 4%;
+}
+
+.auditTitle {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.progressBar {
+    background-color: #333333;
+    border-radius: 4px;
+    height: 6px;
+    margin: 6px 0;
+    position: relative;
+}
+
+.progressDone {
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.progressReceived {
+    background-color:pink;
+    height: 100%;
+    border-radius: 4px;
+    margin-top: 4%;
+}
+
+.auditRatio {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+    color: white;
+    margin-top: 10px;
+}
+
+.ratioNumber {
+    font-weight: bold;
+}
+
+.ratioText {
+    font-size: 0.5em;
+    margin-left: 10px;
+}
+
+.auditInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.auditData {
+    text-align: right;
+}
+
+.h1m {
+    color: white;
+    background-color: #1d1d1d;
+    /* margin: 3%; */
+    margin-left: 33%;
+    margin-top: 4%;
+    inline-size: max-content;
+    padding: 10px;
+}
+
+
+.button1 {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.button1:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.button1:active {
+    color: #000
+}
+
+.button1:active:after {
+    background: transparent;
+}
+
+.button1:hover:before {
+    opacity: 1;
+}
+
+.button1:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+  
+.reboot {
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;  /* Replace <weight> with a valid value */
+    font-style: normal;
+    font-variation-settings: "ROND" 0;
+    margin: 0;
+    padding: 0;
+    color: black;
+    margin-left: 45%;
+    margin-top: -3%;
+    position: absolute;
+    line-height: 1.6;
+    font-size: 43px;
+    color: pink;  /* Note: You have color set twice - consider removing the second one */
+  }
+  
+.logo {
+    /* margin-bottom: 110%; */
+    height: 99px;
+    width: 99px;
+    margin-left: 37%;
+    /* margin-top: 3%; */
+    /* margin-top: 53%; */
+}
+  

@@ -1,12 +1,39 @@
 import { useEffect, useState } from "react";
 import styles from "./Audit.module.css";
 
+// Define types
+interface AuditNode {
+    group: {
+        captainLogin: string;
+        path: string;
+    };
+}
+
+interface AuditsData {
+    pass: { captainLogin: string; projectName: string; status: string }[];
+    fail: { captainLogin: string; projectName: string; status: string }[];
+}
+
+interface GraphQLResponse {
+    data?: {
+        user: Array<{
+            validAudits: {
+                nodes: AuditNode[];
+            };
+            failedAudits: {
+                nodes: AuditNode[];
+            };
+        }>;
+    };
+    errors?: { message: string }[];
+}
+
 function AuditsTable() {
-    const [audits, setAudits] = useState({
+    const [audits, setAudits] = useState<AuditsData>({
         pass: [],
         fail: [],
     });
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         async function fetchUserAudits() {
@@ -24,28 +51,26 @@ function AuditsTable() {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        query: `
-                            query {
-                                user {
-                                    validAudits: audits_aggregate(where: {grade: {_gte: 1}}) {
-                                        nodes {
-                                            group {
-                                                captainLogin
-                                                path
-                                            }
+                        query: `query {
+                            user {
+                                validAudits: audits_aggregate(where: {grade: {_gte: 1}}) {
+                                    nodes {
+                                        group {
+                                            captainLogin
+                                            path
                                         }
                                     }
-                                    failedAudits: audits_aggregate(where: {grade: {_lt: 1}}) {
-                                        nodes {
-                                            group {
-                                                captainLogin
-                                                path
-                                            }
+                                }
+                                failedAudits: audits_aggregate(where: {grade: {_lt: 1}}) {
+                                    nodes {
+                                        group {
+                                            captainLogin
+                                            path
                                         }
                                     }
                                 }
                             }
-                        `,
+                        }`,
                     }),
                 });
 
@@ -55,7 +80,7 @@ function AuditsTable() {
                     return;
                 }
 
-                const result = await response.json();
+                const result: GraphQLResponse = await response.json();
                 if (result.errors) {
                     console.error("GraphQL Errors:", result.errors);
                     setError("GraphQL Errors: " + result.errors.map((err) => err.message).join(", "));
@@ -74,12 +99,12 @@ function AuditsTable() {
 
                 const passAudits = validAuditNodes.map((node) => ({
                     captainLogin: node.group.captainLogin,
-                    projectName: node.group.path.split("/").pop(),
+                    projectName: node.group.path.split("/").pop() || "Unknown",
                     status: "Pass",
                 }));
                 const failAudits = failedAuditNodes.map((node) => ({
                     captainLogin: node.group.captainLogin,
-                    projectName: node.group.path.split("/").pop(),
+                    projectName: node.group.path.split("/").pop() || "Unknown",
                     status: "Fail",
                 }));
 
@@ -153,7 +178,6 @@ function AuditsTable() {
                     </tbody>
                 </table>
             </section>
-
         </div>
     );
 }

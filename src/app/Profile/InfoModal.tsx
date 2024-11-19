@@ -30,9 +30,8 @@ function InfoModal() {
                     className={Style.personal}
 
                 >
-                    <h2>Hi, how are you?</h2>
                     <AllUser />
-                    <button onClick={closeModal}>Close</button>
+                    <button onClick={closeModal} className={Style.butons}>Close</button>
                 </div>
             )}
         </>

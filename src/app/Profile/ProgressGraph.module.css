@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    left: 15%;
+    left: 4%;
     width: 47%;
     position: absolute;
     top: 36%;
@@ -15,11 +15,12 @@
     position: relative;
     justify-content: space-between;
     width: 100%;
+
   }
   
   .levelMarker {
     position: absolute;
-    bottom: 40px;
+    bottom: 1px;
     text-align: center;
     transform: translateX(-50%);
   }
@@ -27,6 +28,7 @@
   .levelLabel {
     font-size: 0.8rem;
     margin-bottom: 5px;
+    
   }
   
   .dot {
@@ -39,7 +41,7 @@
   }
   
   .activeDot {
-    background-color: #a569bd;
+    background-color: pink;
     width: 14px;
     height: 14px;
   }

@@ -1,22 +1,27 @@
 /*!***************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Profile/page.module.css ***!
   \***************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
 .page_Half__aADcU {
     width: 50%; /* Half the width of the page */
     height: 100vh; /* Full height of the viewport */
     background-color: #393939 ; /* Red background */
     box-sizing: border-box; 
     margin: 3%;
+    /* margin-top: 0.7%; */
+    margin-left: 0%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 255);
 }
 .page_Half2__3X_EB {
     width: 50%; /* Half the width of the page */
     height: 100vh; /* Full height of the viewport */
     position: absolute;
-    left: 52%;
+    left: 49%;
     top: 0%;
-    background-color: blue; /* Red background */
+    background-color: #393939; /* Red background */
     box-sizing: border-box; 
     margin: 3%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 255);
 }
 
 #page_username__w9niN {
@@ -31,34 +36,54 @@
 
 .page_info__IRY_g {
     position: fixed;
-    top: 0%;
-    left: 95%;
+    top: 2%;
+    left: 93%;
     z-index: 1000;
+    background-color: black;
+    color: black; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Optional padding for button size */
+    font-size: 16px; /* Optional font size */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    color: white;
 }
+
+.page_info__IRY_g:hover {
+    background-color: #333; /* Slightly lighter shade of black on hover */
+}
+
+
 .page_personal__m3K6R {
     position: fixed;
     top: 0%;
     left: 50%;
     width: 50%;
     height: 100%;
-    background-color: darkslategray;
+    background-color: #1d1d1d;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid #1d1d1d;
     z-index: 2000;
     overflow: auto;
 
 }
+.page_butons__WViI4 {
+    margin-left: 50%;
+    padding: 10px;
+}
 .page_levels__oloNI {
-    background-color: black;
+    background-color: #1d1d1d;
     border: #f0f0f0;
     /* color: black; */
     position: relative;
-    left: 10%;
+    left: 1%;
     position: absolute;
     top: 15%;
+    padding: 10px;
+    border-radius: 8px;
+
 }
 .page_pos__WJwiY {
-    background-color: black;
+    background-color: #1d1d1d;
     border: #f0f0f0;
     position: relative;
     left:22%;
@@ -66,15 +91,180 @@
     top: 26%;
 }
 .page_xp__gbrR2 {
-    background-color: black;
+    background-color: #1d1d1d;
     border: #f0f0f0;
     position: relative;
     left:28%;
     position: absolute;
     top: 15%;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.page_auditContainer__1G6AG {
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1d;
+    color: #ffffff;
+    padding: 20px;
+    width: 530px;
+    border-radius: 8px;
+    margin-left: 20%;
+    margin-top: 4%;
+}
+
+.page_auditTitle__elH7B {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.page_progressBar__nu43O {
+    background-color: #333333;
+    border-radius: 4px;
+    height: 6px;
+    margin: 6px 0;
+    position: relative;
+}
+
+.page_progressDone__VAJAK {
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.page_progressReceived__W1E_o {
+    background-color:pink;
+    height: 100%;
+    border-radius: 4px;
+    margin-top: 4%;
+}
+
+.page_auditRatio__g3_EE {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+    color: white;
+    margin-top: 10px;
+}
+
+.page_ratioNumber__eCc5d {
+    font-weight: bold;
+}
+
+.page_ratioText__SeFGQ {
+    font-size: 0.5em;
+    margin-left: 10px;
+}
+
+.page_auditInfo__Hu0Im {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.page_auditData__363eK {
+    text-align: right;
+}
+
+.page_h1m__dQ0gE {
+    color: white;
+    background-color: #1d1d1d;
+    /* margin: 3%; */
+    margin-left: 33%;
+    margin-top: 4%;
+    inline-size: max-content;
+    padding: 10px;
 }
 
 
+.page_button1__Qb_M1 {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.page_button1__Qb_M1:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: page_glowing__J2hWd 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.page_button1__Qb_M1:active {
+    color: #000
+}
+
+.page_button1__Qb_M1:active:after {
+    background: transparent;
+}
+
+.page_button1__Qb_M1:hover:before {
+    opacity: 1;
+}
+
+.page_button1__Qb_M1:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes page_glowing__J2hWd {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+  
+.page_reboot__Q9nbj {
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;  /* Replace <weight> with a valid value */
+    font-style: normal;
+    font-variation-settings: "ROND" 0;
+    margin: 0;
+    padding: 0;
+    color: black;
+    margin-left: 45%;
+    margin-top: -3%;
+    position: absolute;
+    line-height: 1.6;
+    font-size: 43px;
+    color: pink;  /* Note: You have color set twice - consider removing the second one */
+  }
+  
+.page_logo__7ZXYm {
+    /* margin-bottom: 110%; */
+    height: 99px;
+    width: 99px;
+    margin-left: 37%;
+    /* margin-top: 3%; */
+    /* margin-top: 53%; */
+}
+  
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Profile/Skill/Skill.module.css ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************/
@@ -90,55 +280,77 @@
     max-width: 100%;
     height: 100%;
     position: relative;
-    left: 33%;
+    left: 28%;
     position: absolute;
-    top: 51%;
+    top: 45%;
 }
 
 .Skill_Chart1__g_IPi {
     max-width: 100%;
     height: 100%;
     position: relative;
-    left: 7%;
+    left: 0%;
     position: absolute;
-    top: 30%;
+    top: 23%;
 }
 .Skill_skillsAmount__6lI7r {
     position: absolute;
     top: 50%;
     width: 50%;
-    background-color: black;
+    background-color: #1d1d1d;
 }
 .Skill_Technologies__M7NxU {
-    background-color: red;
-    font-size: 19px;
-    width: 267px;
-    height: 143px;
-    background-color: lightblue;
-    display: inline-block;
-    text-align: center;
-    line-height: 33px;
+    /* background-color: red; */
+    position: absolute;
+    left: 66%;
+    margin-top: 8%;
+    top: 62%;
+    width: 299px;
+    /* height: 144px; */
+    background-color: #1d1d1d;
+    padding: 10px;
+    /* text-align: center; */
+    border-radius: 8px;
+
 }
 .Skill_technologies2__ropz6 {
-    background-color: red;
     position: absolute;
-    left: 28%;
-    position: fixed;
-    top: 55%;
+    left: 4%;
+    height: -81%;
+    margin-top: 8%;
+    top: -24%;
     width: 299px;
-    height: 144px;
-    background-color: lightblue;
-    display: inline-block;
-    text-align: center;
-    line-height: 45px;
-}
+    background-color: #1d1d1d;
+    padding: 10px;
+    border-radius: 8px;
 
+}
+.Skill_h3m__zYBLS {
+    position:absolute;
+    left: 73%;
+    top: 66%;
+    margin-top: 4%;
+    background-color: #1d1d1d;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+.Skill_h3z__n9u9n {
+    position: absolute;
+    left: 12%;
+    top: 66%;
+    margin-top: 4%;
+    background-color: #1d1d1d;
+    padding: 10px;
+    border-radius: 8px;
+
+}
 /*!************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Profile/ProgressGraph.module.css ***!
   \************************************************************************************************************************************************************************************************************************************************************************************/
 .ProgressGraph_container__zDoZg {
     position: relative;
-    left: 15%;
+    left: 4%;
     width: 47%;
     position: absolute;
     top: 36%;
@@ -153,11 +365,12 @@
     position: relative;
     justify-content: space-between;
     width: 100%;
+
   }
   
   .ProgressGraph_levelMarker__Veq_7 {
     position: absolute;
-    bottom: 40px;
+    bottom: 1px;
     text-align: center;
     transform: translateX(-50%);
   }
@@ -165,6 +378,7 @@
   .ProgressGraph_levelLabel__J_6Lr {
     font-size: 0.8rem;
     margin-bottom: 5px;
+    
   }
   
   .ProgressGraph_dot__jEZ2H {
@@ -177,7 +391,7 @@
   }
   
   .ProgressGraph_activeDot__aPr2E {
-    background-color: #a569bd;
+    background-color: pink;
     width: 14px;
     height: 14px;
   }
@@ -209,32 +423,41 @@
         justify-content: space-between;
         gap: 2rem;
         padding: 2rem;
-        
+
     }
 
     .Audit_auditSection__HtRML {
         width: 45%;
-        max-height: 200px; /* Adjust the height as desired */
+        max-height: 251px; /* Adjust the height as desired */
         padding: 1rem;
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         background-color: #f9f9f9;
         overflow-y: auto; /* Enables vertical scroll */
         font-size: 0.9rem; /* Reduces font size for a smaller look */
+        
     }
     
     .Audit_passAudits__Y15w5 {
-        background-color: #e6f7e6;
+        position: absolute;
+        top: 59%;
+        left: 1%;
+        background-color: #1d1d1d;
+        color: black;
     }
 
     .Audit_failAudits__nA2dl {
-        background-color: #f8d7da;
+        position: absolute;
+        top: 59%;
+        left: 50%;
+        background-color: #1d1d1d;
+        color: black;
     }
 
     .Audit_header__XmxzW {
         margin-bottom: 1rem;
         font-size: 1.5rem;
-        color: #333;
+        color: white;
     }
 
     .Audit_table__GR_Ao {
@@ -254,14 +477,14 @@
     }
 
     .Audit_th__tK_i3 {
-        background-color: #f4f4f4;
+        background-color: gray;
         font-weight: bold;
         height: inherit;
         
     }
 
     .Audit_td__1ZMWU {
-        background-color: #fff;
+        background-color: gray;
         overflow-y: auto;
         width: 10%;
     }
@@ -286,5 +509,68 @@
   \**********************************************************************************************************************************************************************************************************************************************************************************/
 .pop_username__Zcd2j {
     color: red;
+}
+.pop_name__8M6gk {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.pop_paragraph__ehOMt {
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: #1d1d1d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: withe;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+#pop_error-message__N_iqV {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.pop_div__xcU1X {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 255);
+    font-family: 'Arial', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .pop_div__xcU1X {
+        padding: 0.5rem;
+    }
+
+    .pop_name__8M6gk {
+        font-size: 1.5rem;
+    }
+
+    .pop_paragraph__ehOMt {
+        font-size: 0.9rem;
+    }
+}
+.pop_container__a68Zp {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #393939;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
 }
 

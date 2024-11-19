@@ -1,8 +1,5 @@
-// src/app/Profile/Dashpord.tsx
-import styles from "./pop.module.css"
-
-
 import React, { useEffect, useState } from 'react';
+import styles from "./pop.module.css";
 
 const AllUser: React.FC = () => {
     const [userData, setUserData] = useState<any>(null);
@@ -28,9 +25,8 @@ const AllUser: React.FC = () => {
                     {
                         user {
                             attrs
-                             }
+                        }
                     }
-
                     `,
                 }),
             });
@@ -66,27 +62,25 @@ const AllUser: React.FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className={styles.container}>
             {errorMessage && <div id="error-message">{errorMessage}</div>}
             {userData && (
-                <div>
-                    <h1 id="name">Welcome, {userData.attrs.firstName || 'N/A'} {userData.attrs. lastName || 'N/A'}!</h1>
-                    <p id="username" className={styles.username}>👤 {userData.attrs.firstName || 'N/A'}</p>
-                    <p id="email">📩 {userData.attrs.email || 'N/A'}</p>
-                    <p id="campus">🌐 {userData.attrs.addressCountry || 'N/A'}</p>
-                    <p id="campus"> {userData.attrs.genders || 'N/A'}</p>
-                    <p id="campus"> {userData.attrs.CPRnumber || 'N/A'}</p>
-                    <p id="campus"> {userData.attrs.PhoneNumber || 'N/A'}</p>
-                    <p id="campus"> {userData.attrs.dateOfBirth || 'N/A'}</p>
-                    <p id="campus"> {userData.attrs.qualification || 'N/A'}</p>
-                    <p id="campus"> {userData.attrs.Degree || 'N/A'}</p>
-
-                    
-
+                <div className={styles.div}>
+                    <h1 id="name" className={styles.name}>Welcome, {userData.attrs.firstName || 'N/A'} {userData.attrs.lastName || 'N/A'}!</h1>
+                    <p id="username" className={styles.paragraph}>👤 {userData.attrs.firstName || 'N/A'}</p>
+                    <p id="email" className={styles.paragraph}>📩  {userData.attrs.email || 'N/A'}</p>
+                    <p id="campus" className={styles.paragraph}>🌐  {userData.attrs.addressCountry || 'N/A'}</p>
+                    <p id="gender" className={styles.paragraph}>🧑‍🤝‍🧑 Gender: {userData.attrs.genders || 'N/A'}</p>
+                    <p id="cpr" className={styles.paragraph}>👤 CPR Number: {userData.attrs.CPRnumber || 'N/A'}</p>
+                    <p id="phone" className={styles.paragraph}>📱 Phone: {userData.attrs.PhoneNumber || 'N/A'}</p>
+                    <p id="dob" className={styles.paragraph}>🎂 Date of Birth: {userData.attrs.dateOfBirth || 'N/A'}</p>
+                    <p id="qualification" className={styles.paragraph}>🎓 Qualification: {userData.attrs.qualification || 'N/A'}</p>
+                    <p id="degree" className={styles.paragraph}>🎓 Degree: {userData.attrs.Degree || 'N/A'}</p>
                 </div>
             )}
         </div>
     );
+    
 };
 
 export default AllUser;

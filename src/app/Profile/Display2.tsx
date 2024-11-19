@@ -4,27 +4,23 @@ import React from 'react';
 import styles from "./page.module.css";
 import Skill from './Skill/Skill';
 import AuditsTable from '../Audit/Audit';
+import AuditRatio from './AuditRatio'; // Import the new AuditRatio component
 
-const UserInfoDisplay2 = ({ auditTatio, totalDown, totalUp }) => {
-    // console.log("fuck", userData.tatal)
+// Define the type for the props
+interface UserInfoDisplay2Props {
+    auditTatio: number; // Adjust the type as per your actual data type
+    totalDown: number;  // Adjust the type as per your actual data type
+    totalUp: number;    // Adjust the type as per your actual data type
+}
 
-    
-      return (
+const UserInfoDisplay2: React.FC<UserInfoDisplay2Props> = ({ auditTatio, totalDown, totalUp }) => {
+    return (
         <div className={styles.Half2}>
-          <h3>Your Audit Ratio ➝ {auditTatio}</h3>
-            <h3>your total up {totalUp}</h3>
-            <h3>your total down {totalUp} </h3>
-            <h1>your last autdits ?? </h1>
-            <h1>your audit ?????</h1>
-          <ul>
-                {/* <p>Total Up: {item.totalUp}</p> */}
-                {/* <p>Total Down: {item.totalDown}</p> */}
-          </ul>
-          <AuditsTable/>
-
+            {/* Use the AuditRatio component */}
+            <AuditRatio auditRatio={auditTatio} totalUp={totalUp} totalDown={totalDown} />
+            <AuditsTable />
         </div>
-      );
-
+    );
 };
 
 export default UserInfoDisplay2;

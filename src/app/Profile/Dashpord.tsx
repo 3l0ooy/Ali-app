@@ -1,23 +1,21 @@
 // src/app/Profile/UserInfo.tsx
 
-import styles from "./page.module.css";
 "use client";
 
 import React, { useEffect, useState } from 'react';
 import { USER_INFO_QUERY, TRANSACTION_QUERY, AUDIT_QUERY , TOTAL_XP, User_Skill, Audit_Ratio} from './Query';
 import UserInfoDisplay from './Display';
-import Skill from "./Skill/Skill";
 import UserInfoDisplay2 from "./Display2";
 
-let auditTatio: null = null
-let totalUp: null = null 
-let totalDown: null = null
+let auditTatio: number | null = null;
+let totalUp: number | null = null;
+let totalDown: number | null = null;
 
 const UserInfo: React.FC = () => {
 
-    const [userAudit, setUserAudit] = useState<any>(null)
-    const [userSkill, setUserSkill] = useState<any>(null)
-    const [ userXP, setUserXP] = useState<any>(null)
+    const [userAudit, setUserAudit] = useState<any>(null);
+    const [userSkill, setUserSkill] = useState<any>(null);
+    const [userXP, setUserXP] = useState<any>(null);
     const [userData, setUserData] = useState<any>(null);
     const [transactionData, setTransactionData] = useState<any>(null);
     const [auditData, setAuditData] = useState<any>(null);
@@ -77,36 +75,35 @@ const UserInfo: React.FC = () => {
             setAuditData(data.user);
         }
     };
+
     const fetchTotalXP = async () => {
         const data = await fetchData(TOTAL_XP);
         if (data) {
-            setUserXP(data.transaction_aggregate?.aggregate?.sum?.amount)
+            setUserXP(data.transaction_aggregate?.aggregate?.sum?.amount);
         }
     };
+
     const fetchUserSkill = async () => {
         const data = await fetchData(User_Skill);
         if (data) {
-            setUserSkill(data)
+            setUserSkill(data);
         }
-    }
+    };
+
     const fetchUserAudit = async () => {
-        const data = await fetchData(Audit_Ratio)
+        const data = await fetchData(Audit_Ratio);
         if (data) {
-            setUserAudit(data)
+            setUserAudit(data);
         }
-
-
-    }
-    // console.log("sayed", userAudit)
+    };
 
     useEffect(() => {
         if (userAudit) {
-            auditTatio = userAudit.user[0].auditRatio
-             totalUp = userAudit.user[0].totalUp
-             totalDown = userAudit.user[0].totalDown
-            console.log("sayed")
+            auditTatio = userAudit.user[0].auditRatio;
+            totalUp = userAudit.user[0].totalUp;
+            totalDown = userAudit.user[0].totalDown;
         }
-    })
+    }, [userAudit]); // Added userAudit as a dependency
 
     useEffect(() => {
         fetchUserAudit();
@@ -115,14 +112,13 @@ const UserInfo: React.FC = () => {
         fetchTransactionInfo();
         fetchAuditInfo();
         fetchTotalXP();
-    }, []);
+    }, []); // Only run once when the component mounts
 
     return (
         <div>
             {errorMessage && <div id="error-message">{errorMessage}</div>}
-            {userData && <UserInfoDisplay userData={userData} transactionData={transactionData} auditData={auditData} userXP={userXP} userdkill={userSkill} />}
-            {userData && <UserInfoDisplay2  auditTatio={auditTatio} totalDown={totalDown} totalUp={totalUp}/>}
-
+            {userData && <UserInfoDisplay userData={userData} transactionData={transactionData} auditData={auditData} userXP={userXP} userkill={userSkill} />}
+            {userData && <UserInfoDisplay2 auditTatio={auditTatio ?? 0} totalDown={totalDown ?? 0} totalUp={totalUp ?? 0} />}
         </div>
     );
 };
