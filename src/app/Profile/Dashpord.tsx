@@ -117,10 +117,9 @@ const UserInfo: React.FC = () => {
     return (
         <div>
             {errorMessage && <div id="error-message">{errorMessage}</div>}
-            {userData && <UserInfoDisplay userData={userData} transactionData={transactionData} auditData={auditData} userXP={userXP} userkill={userSkill} />}
+            {userData && <UserInfoDisplay userData={userData} transactionData={transactionData} auditData={auditData} userXP={userXP} userSkill={userSkill} />}
             {userData && <UserInfoDisplay2 auditTatio={auditTatio ?? 0} totalDown={totalDown ?? 0} totalUp={totalUp ?? 0} />}
         </div>
     );
 };
-
 export default UserInfo;

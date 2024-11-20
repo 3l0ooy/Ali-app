@@ -50,7 +50,7 @@ export const AUDIT_QUERY = `
         }
     }
 `;
-export const TOTAL_XP =`
+export const TOTAL_XP = `
                             query {
                             transaction_aggregate(
                                 where: {
@@ -68,8 +68,8 @@ export const TOTAL_XP =`
 
 `;
 
-export const User_Skill = 
-`
+export const User_Skill =
+    `
     query {
         transaction(
             where: {
@@ -96,8 +96,8 @@ export const User_Skill =
 `;
 
 
-export const Audit_Ratio = 
-`
+export const Audit_Ratio =
+    `
         {
   user {
     auditRatio

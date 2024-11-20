@@ -146,7 +146,7 @@ function AuditsTable() {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="2" className={`${styles.td} ${styles.noAudits}`}>No pass audits available</td>
+                                <td colSpan={2} className={`${styles.td} ${styles.noAudits}`}>No pass audits available</td>
                             </tr>
                         )}
                     </tbody>
@@ -172,7 +172,7 @@ function AuditsTable() {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="2" className={`${styles.td} ${styles.noAudits}`}>No fail audits available</td>
+                                <td colSpan={2} className={`${styles.td} ${styles.noAudits}`}>No fail audits available</td>
                             </tr>
                         )}
                     </tbody>
@@ -181,5 +181,4 @@ function AuditsTable() {
         </div>
     );
 }
-
 export default AuditsTable;

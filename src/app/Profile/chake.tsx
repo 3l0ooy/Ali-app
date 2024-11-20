@@ -12,7 +12,7 @@ const levels = [
   { level: 60, label: "Full-Stack developer" }
 ];
 
-const ProgressGraph = ({ level }) => {
+const ProgressGraph: React.FC<{ level: number }> = ({ level }) => {
   // Find the closest level label based on the input level
   const currentLevel = levels.reduce((prev, curr) => (
     Math.abs(curr.level - level) < Math.abs(prev.level - level) ? curr : prev
@@ -33,5 +33,4 @@ const ProgressGraph = ({ level }) => {
     </div>
   );
 };
-
 export default ProgressGraph;

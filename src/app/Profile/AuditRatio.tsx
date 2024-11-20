@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './page.module.css';
 
-const AuditRatio = ({ auditRatio, totalUp, totalDown }) => {
+const AuditRatio: React.FC<{ auditRatio: number; totalUp: number; totalDown: number }> = ({ auditRatio, totalUp, totalDown }) => {
     return (
         <div className={styles.auditContainer}>
             <h3 className={styles.auditTitle}>Audits ratio</h3>
