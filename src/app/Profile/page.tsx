@@ -12,10 +12,16 @@ import { useRouter } from "next/navigation"; // Import useRouter from next/navig
 function Profile() {
     const router = useRouter(); // Initialize the router
 
-    // Function to handle button click
-    const handleLogout = () => {
-        router.push('/'); // Navigate to the desired route
-        localStorage.clear();
+    const handleLogout = async () => {
+        try {
+            await logout();
+
+            router.push('/'); 
+
+            localStorage.clear();
+        } catch (error) {
+            console.error("Error during logout:", error);
+        }
     };
 
     return (
@@ -31,6 +37,51 @@ function Profile() {
 
         </main>
     );
+}
+
+
+async function logout() {
+    const token = localStorage.getItem("jwt");
+
+    if (token) {
+        try {
+            const signoutResponse = await fetch("https://learn.reboot01.com/api/auth/signout", {
+                method: "POST",
+                headers: {
+                    "Authorization": `${token}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({}),
+            });
+
+            if (signoutResponse.ok) {
+                console.log("Successfully signed out!");
+            } else {
+                const signoutData = await signoutResponse.json();
+                console.error("Error signing out:", signoutData);
+            }
+
+            const expireResponse = await fetch("https://learn.reboot01.com/api/auth/expire", {
+                method: "GET",
+                headers: {
+                    "x-jwt-token": token,
+                },
+            });
+
+            if (!expireResponse.ok) {
+                const expireData = await expireResponse.json();
+                console.error("Error expiring token:", expireData);
+                return;
+            }
+        } catch (error) {
+            console.error("Network error:", error);
+        }
+
+        localStorage.removeItem("jwt");
+
+    } else {
+        console.error("No JWT token found in localStorage.");
+    }
 }
 
 export default Profile;
